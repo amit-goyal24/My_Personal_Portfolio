@@ -1,0 +1,36 @@
+/* Custom Cursor Styling */
+.custom-cursor-dot,
+.custom-cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), background-color 0.2s, border-color 0.2s;
+}
+
+.custom-cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-color, #149ddd);
+}
+
+.custom-cursor-outline {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent-color, #149ddd);
+}
+
+/* Hide default cursor on desktop screens to allow the custom cursor to take over */
+@media (min-width: 992px) {
+  html, body {
+    cursor: none;
+  }
+  a, button, [role="button"], select, input, textarea, 
+  .portfolio-item, .navmenu a, .header-toggle, .progress-bar-wrap {
+    cursor: none;
+  }
+}
