@@ -11,3 +11,15 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# Node modules
+node_modules/
+
+# Environment configurations
+.env
+.env.local
+
+# SQLite Database and local fallback files
+contact_submissions.db
+contact_submissions.db-journal
+contact_submissions.json
